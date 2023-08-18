@@ -1,0 +1,30 @@
+{
+  "name": "api-categories",
+  "version": "1.0.0",
+  "description": "API Categories , with mysql remote",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Ab4ch3/API-Categories.git"
+  },
+  "author": "Miguel Abache",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Ab4ch3/API-Categories/issues"
+  },
+  "homepage": "https://github.com/Ab4ch3/API-Categories#readme",
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "debug": "^4.3.4",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-promise-router": "^4.1.1",
+    "express-validator": "^7.0.1"
+  }
+}
