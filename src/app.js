@@ -10,6 +10,7 @@ import Config from "./config/index.js";
 import debug from "debug";
 const logger = debug("app:module-app");
 
+import { ConnectMysql } from "./database/index.js";
 // Start Express
 const app = express();
 
@@ -24,5 +25,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.listen(Config.PORT, () => {
-  logger(`### SERVER_LISTENING_ON_PORT ${Config.PORT} ###`);
+  logger(`*** SERVER_LISTENING_ON_PORT ${Config.PORT} ***`);
 });
+
+ConnectMysql();
