@@ -6,7 +6,6 @@ import { Sequelize } from "sequelize";
 import Config from "../config/index.js";
 
 const logger = debug("app:module-sequelize");
-
 const sequelize = new Sequelize(
   Config.DB_NAME,
   Config.DB_USER,
@@ -19,6 +18,7 @@ const sequelize = new Sequelize(
 
 const ConnectMysql = async () => {
   try {
+    await sequelize.authenticate();
     logger(`*** MYSQL_CONNECT_SUCCESFULL ***`);
   } catch (e) {
     logger(e);
