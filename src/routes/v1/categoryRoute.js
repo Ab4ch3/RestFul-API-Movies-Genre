@@ -7,10 +7,12 @@ import {
   getAllCategories,
   getCategory,
   createCategory,
+  updateCategory,
 } from "../../controllers/categoryController.js";
 const router = routerx();
 
 router.get("/:idCategory", getCategory);
+router.put("/:idCategory", updateCategory);
 router.get("/", getAllCategories);
 router.post("/", validatorCreateCategory, createCategory);
 

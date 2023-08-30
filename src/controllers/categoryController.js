@@ -77,5 +77,33 @@ const createCategory = async (req, res, next) => {
     next(e);
   }
 };
+/**
+ * Update Category
+ * @param {*} req
+ * @param {*} res
+ * @param {*} next
+ */
+const updateCategory = async (req, res, next) => {
+  try {
+    const {
+      params: { idCategory },
+    } = req;
+    const { body } = req;
+    const updatedCategory = await categoryServices.updateCategory(
+      idCategory,
+      body
+    );
 
-export { getAllCategories, getCategory, createCategory };
+    res.status(200).json({
+      status: "OK",
+      message: "CATEGORY_UPDATED",
+      data: updatedCategory,
+    });
+  } catch (e) {
+    logger(e);
+    handleHttpErrors(res, "ERROR_UPDATED_CATEGORY");
+    next(e);
+  }
+};
+
+export { getAllCategories, getCategory, createCategory, updateCategory };

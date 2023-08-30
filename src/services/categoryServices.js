@@ -30,4 +30,19 @@ export default {
 
     return result;
   },
+  updateCategory: async (idCategory, Category) => {
+    const result = await models.Category.update(
+      {
+        name: Category.name,
+        description: Category.description,
+      },
+      {
+        where: {
+          id: idCategory,
+        },
+      }
+    );
+
+    return result;
+  },
 };
