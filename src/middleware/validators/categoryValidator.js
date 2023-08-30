@@ -1,11 +1,11 @@
-// Importamos express validadtor
+// Import express-validadtor, function check
 import { check } from "express-validator";
 
-// Importamos la respuesta del validador
+// Import response validateResults
 import validateResults from "../../helpers/handleValidator.js";
 
 /**
- * Definimos la validacion basado en el modelo
+ * define validate based on models
  */
 const validatorCreateCategory = [
   check("name").exists().notEmpty(),

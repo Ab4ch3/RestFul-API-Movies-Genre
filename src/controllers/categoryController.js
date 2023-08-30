@@ -93,12 +93,19 @@ const updateCategory = async (req, res, next) => {
       idCategory,
       body
     );
+    if (!updatedCategory) {
+      return handleHttpErrors(res, "NOT_FOUND", 404);
+    }
 
-    res.status(200).json({
-      status: "OK",
-      message: "CATEGORY_UPDATED",
-      data: updatedCategory,
-    });
+    if (updatedCategory == 0) {
+      handleHttpErrors(res, "ERROR_UPDATED_CATEGORY");
+    } else {
+      res.status(200).json({
+        status: "OK",
+        message: "CATEGORY_UPDATED",
+        data: updatedCategory,
+      });
+    }
   } catch (e) {
     logger(e);
     handleHttpErrors(res, "ERROR_UPDATED_CATEGORY");
@@ -106,4 +113,46 @@ const updateCategory = async (req, res, next) => {
   }
 };
 
-export { getAllCategories, getCategory, createCategory, updateCategory };
+/**
+ * Delete Category
+ * @param {*} req
+ * @param {*} res
+ * @param {*} next
+ */
+const deleteCategory = async (req, res, next) => {
+  try {
+    const {
+      params: { idCategory },
+    } = req;
+    const { body } = req;
+    const deletedCategory = await categoryServices.deleteCategory(
+      idCategory,
+      body
+    );
+    if (!deletedCategory) {
+      return handleHttpErrors(res, "NOT_FOUND", 404);
+    }
+
+    if (deletedCategory == 0) {
+      handleHttpErrors(res, "ERROR_DELETED_CATEGORY");
+    } else {
+      res.status(200).json({
+        status: "OK",
+        message: "CATEGORY_DELETED",
+        data: deletedCategory,
+      });
+    }
+  } catch (e) {
+    logger(e);
+    handleHttpErrors(res, "ERROR_DELETED_CATEGORY");
+    next(e);
+  }
+};
+
+export {
+  getAllCategories,
+  getCategory,
+  createCategory,
+  updateCategory,
+  deleteCategory,
+};
