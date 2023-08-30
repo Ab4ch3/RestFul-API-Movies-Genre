@@ -4,7 +4,7 @@ import { validationResult } from "express-validator";
 import handleHttpErros from "../helpers/handleErrors.js";
 
 const validateResults = (req, res, next) => {
-  const result = validateResults(req);
+  const result = validationResult(req);
   if (result.isEmpty()) {
     return next();
   }

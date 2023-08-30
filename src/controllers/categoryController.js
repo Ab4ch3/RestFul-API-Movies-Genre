@@ -29,4 +29,53 @@ const getAllCategories = async (req, res, next) => {
   }
 };
 
-export { getAllCategories };
+/**
+ * Get Category
+ * @param {*} req
+ * @param {*} res
+ * @param {*} next
+ */
+const getCategory = async (req, res, next) => {
+  try {
+    const {
+      params: { idCategory },
+    } = req;
+    const category = await categoryServices.getCategory(idCategory);
+    if (!category) {
+      handleHttpErrors(res, "NOT_FOUND", 404);
+    } else {
+      res.status(200).json({
+        status: "OK",
+        data: category,
+      });
+    }
+  } catch (e) {
+    logger(e);
+    handleHttpErrors(res, "ERROR_GET_CATEGORY");
+    next(e);
+  }
+};
+
+/**
+ * Create Category
+ * @param {*} req
+ * @param {*} res
+ * @param {*} next
+ */
+const createCategory = async (req, res, next) => {
+  try {
+    const body = matchedData(req);
+    const createdCategory = await categoryServices.createCategory(body);
+    res.status(200).json({
+      status: "OK",
+      message: "CATEGORY_CREATED",
+      data: createdCategory,
+    });
+  } catch (e) {
+    logger(e);
+    handleHttpErrors(res, "ERROR_CREATED_CATEGORY");
+    next(e);
+  }
+};
+
+export { getAllCategories, getCategory, createCategory };
