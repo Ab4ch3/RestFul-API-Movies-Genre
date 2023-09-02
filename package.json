@@ -30,6 +30,8 @@
     "express-validator": "^7.0.1",
     "morgan": "^1.10.0",
     "mysql2": "^3.6.0",
-    "sequelize": "^6.32.1"
+    "sequelize": "^6.32.1",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.0"
   }
 }

@@ -13,7 +13,8 @@ import v1Router from "./routes/v1/index.js";
 // Import Debug
 import debug from "debug";
 const logger = debug("app:module-app");
-
+// Import Swagger
+import swaggerDocs from "./routes/v1/swagger.js";
 // Import Path
 //we can use dirname and filename
 import path from "path";
@@ -48,7 +49,8 @@ app.use(v1Router);
  * Enabled Server Listen
  */
 app.listen(Config.PORT, () => {
-  logger(`*** SERVER_LISTENING_ON_PORT ${Config.PORT} ***`);
+  logger(`*** SERVER_LISTENING_ON_PORT http://localhost:${Config.PORT} ***`);
+  swaggerDocs(app, Config.PORT);
 });
 
 ConnectMysql();

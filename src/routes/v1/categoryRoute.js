@@ -11,12 +11,13 @@ import {
   updateCategory,
   deleteCategory,
 } from "../../controllers/categoryController.js";
+
 const router = routerx();
 
+router.post("/", validatorCreateCategory, createCategory);
 router.get("/:idCategory", getCategory);
 router.put("/:idCategory", updateCategory);
 router.delete("/:idCategory", deleteCategory);
 router.get("/", getAllCategories);
-router.post("/", validatorCreateCategory, createCategory);
 
 export default router;
