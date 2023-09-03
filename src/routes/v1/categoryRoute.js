@@ -53,6 +53,11 @@ const router = routerx();
  *                     message:
  *                       type: string
  *                       example: "ERROR_GET_CATEGORIES"
+ */
+router.get("/", getAllCategories);
+/**
+ * @swagger
+ * /categories:
  *   post:
  *     summary: Create a new Category
  *     tags: [Categories]
@@ -97,6 +102,10 @@ const router = routerx();
  *                     message:
  *                       type: string
  *                       example: "ERROR_CREATE_CATEGORY"
+ */
+router.post("/", validatorCreateCategory, createCategory);
+/**
+ * @swagger
  * /categories/{idCategory}:
  *   get:
  *     summary: Get an existing Category
@@ -156,6 +165,11 @@ const router = routerx();
  *                     message:
  *                       type: string
  *                       example: "ERROR_GET_CATEGORY"
+ */
+router.get("/:idCategory", getCategory);
+/**
+ * @swagger
+ * /categories/{idCategory}:
  *   put:
  *     summary: Update an existing Category
  *     tags: [Categories]
@@ -223,6 +237,11 @@ const router = routerx();
  *                     message:
  *                       type: string
  *                       example: "ERROR_UPDATED_CATEGORY"
+ */
+router.put("/:idCategory", updateCategory);
+/**
+ * @swagger
+ * /categories/{idCategory}:
  *   delete:
  *     summary: Delete an existing Category
  *     tags: [Categories]
@@ -284,10 +303,6 @@ const router = routerx();
  *                       type: string
  *                       example: "ERROR_DELETED_CATEGORY"
  */
-router.get("/", getAllCategories);
-router.post("/", validatorCreateCategory, createCategory);
-router.get("/:idCategory", getCategory);
-router.put("/:idCategory", updateCategory);
 router.delete("/:idCategory", deleteCategory);
 
 export default router;
