@@ -21,6 +21,8 @@ const swaggerOptions = {
       description:
         "This is an example of a Category API-REST Server based on the OpenAPI 3.0 specification. ",
       contact: {
+        name: "Miguel Abache",
+        url: "https://github.com/Ab4ch3/API-Categories.git",
         email: "miiguel.abache@gmail.com",
       },
     },
@@ -32,7 +34,7 @@ const swaggerOptions = {
   },
 
   apis: [
-    `${path.join(__dirname, "./categoryRoute.js")}`,
+    `${path.join(__dirname, "./*.js")}`,
     "./src/models/categoriesModel.js",
   ], // files containing annotations as above
 };

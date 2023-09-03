@@ -6,7 +6,9 @@ const handleHttpErros = (
   res.status(code);
   res.send({
     status: "ERROR",
-    message: message,
+    data: {
+      message: message,
+    },
   });
 };
 
