@@ -1,4 +1,3 @@
-
 # API-REST Categories
 
 API-REST about film categories.
@@ -9,11 +8,9 @@ API-REST about film categories.
 
 **Library:** Sequelize ORM, Swagger, Express-router, Express-validator
 
-
 ## Environment Variables
 
 To run this project, you will need to add the following environment variables to your .env file, this is an example for you credentials and port.
-
 
 `PORT`: `2000`
 
@@ -26,6 +23,7 @@ To run this project, you will need to add the following environment variables to
 `DB_PORT`: `123`
 
 `DB_NAME`: `mgta1123123one_Test123ing`
+
 ## Run Locally
 
 Clone the project
@@ -52,7 +50,6 @@ Start the server
   npm run start
 ```
 
-
 ## API Reference
 
 #### Get all Categories
@@ -61,17 +58,15 @@ Start the server
   GET /api/v1/categories
 ```
 
-
-
 #### Get Category
 
 ```http
   GET /api/v1/categories/${idCategory}
 ```
 
-| Parameter | Type     | Description                       |
-| :-------- | :------- | :-------------------------------- |
-| `idCategory`      | `int` | **Required**. Id of Category to fetch |
+| Parameter    | Type  | Description                           |
+| :----------- | :---- | :------------------------------------ |
+| `idCategory` | `int` | **Required**. Id of Category to fetch |
 
 #### Create Category
 
@@ -79,10 +74,10 @@ Start the server
   POST /api/v1/categories/
 ```
 
-| body | Type     | Description                       |
-| :-------- | :------- | :-------------------------------- |
-| `name`      | `string` | **Required**. name of Category |
-| `description`      | `string` | **Required**. description of Category |
+| Body          | Type     | Description                           |
+| :------------ | :------- | :------------------------------------ |
+| `name`        | `string` | **Required**. name of Category        |
+| `description` | `string` | **Required**. description of Category |
 
 #### Update Category
 
@@ -90,14 +85,14 @@ Start the server
   PUT /api/v1/categories/${idCategory}
 ```
 
-| Parameter | Type     | Description                       |
-| :-------- | :------- | :-------------------------------- |
-| `idCategory`      | `int` | **Required**. Id of Category to update |
+| Parameter    | Type  | Description                            |
+| :----------- | :---- | :------------------------------------- |
+| `idCategory` | `int` | **Required**. Id of Category to update |
 
-| body | Type     | Description                       |
-| :-------- | :------- | :-------------------------------- |
-| `name`      | `string` |  name of Category |
-| `description`      | `string` |  description of Category |
+| Body          | Type     | Description             |
+| :------------ | :------- | :---------------------- |
+| `name`        | `string` | name of Category        |
+| `description` | `string` | description of Category |
 
 #### Delete Category
 
@@ -105,19 +100,17 @@ Start the server
   DELETE /api/v1/categories/${idCategory}
 ```
 
-| Parameter | Type     | Description                       |
-| :-------- | :------- | :-------------------------------- |
-| `idCategory`      | `int` | **Required**. Id of Category to delete |
+| Parameter    | Type  | Description                            |
+| :----------- | :---- | :------------------------------------- |
+| `idCategory` | `int` | **Required**. Id of Category to delete |
 
 ## Authors
 
 - [@Ab4ch3](https://github.com/Ab4ch3)
 
-
 ## Demo
 
 is coming soon!!
-
 
 ## License
 
