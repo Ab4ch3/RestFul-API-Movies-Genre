@@ -49,7 +49,7 @@ app.use(v1Router);
  * Enabled Server Listen
  */
 app.listen(Config.PORT, () => {
-  logger(`*** SERVER_LISTENING_ON_PORT http://localhost:${Config.PORT} ***`);
+  logger(`*** SERVER_LISTENING_ON_PORT ${Config.HOST}:${Config.PORT} ***`);
   swaggerDocs(app, Config.PORT);
 });
 

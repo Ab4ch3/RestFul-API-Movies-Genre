@@ -3,6 +3,9 @@ import swaggerJSDoc from "swagger-jsdoc";
 import SwaggerUi from "swagger-ui-express";
 // Importor Config
 import Config from "../../config/index.js";
+// Import Debug
+import debug from "debug";
+const logger = debug("app:module-swagger");
 // Import path
 import path from "path";
 import { dirname } from "path";
@@ -49,8 +52,8 @@ const swaggerDocs = (app, port) => {
     res.setHeader("Content-Type", "application/json");
     res.send(swaggerSpec);
   });
-  console.log(
-    `Version 1 Docs are available on http://localhost:${Config.PORT}/api/v1/docs`
+  logger(
+    `***  Version 1 Docs are available on ${Config.HOST}:${Config.PORT}/api/v1/docs ***`
   );
 };
 
