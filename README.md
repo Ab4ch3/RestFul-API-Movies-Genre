@@ -34,7 +34,7 @@ Clone the project
 
 Go to the project directory
 
-```bash
+```sh
   cd API-Categories
 ```
 
