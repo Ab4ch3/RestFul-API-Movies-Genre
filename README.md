@@ -1,6 +1,6 @@
-# API-RESTful Categories
+# RESTful API Categories
 
-API-RESTful about film categories.
+RESTful API about film categories.
 
 ## Tech Stack
 
