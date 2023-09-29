@@ -1,6 +1,6 @@
-# API-REST Categories
+# API-RESTful Categories
 
-API-REST about film categories.
+API-RESTful about film categories.
 
 ## Tech Stack
 
