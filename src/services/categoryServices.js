@@ -1,4 +1,4 @@
-import models from "../models/index.js";
+import models from '../models/index.js';
 
 export default {
   /**
@@ -87,7 +87,7 @@ export default {
         id: idCategory,
       },
     });
-    console.log(result, "desde servicio");
+    console.log(result, 'desde servicio');
     return result;
   },
 };

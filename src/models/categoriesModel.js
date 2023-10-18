@@ -1,8 +1,8 @@
 // Importamos el Sequelize , del archivo databases
-import { sequelize } from "../database/index.js";
+import { sequelize } from '../database/index.js';
 
 // import DataTypes
-import { DataTypes } from "sequelize";
+import { DataTypes } from 'sequelize';
 
 /**
  * Definir Model Categories
@@ -34,7 +34,7 @@ import { DataTypes } from "sequelize";
  *
  */
 const Category = sequelize.define(
-  "categories", //Sera el nombre de la tabla que se apuntara
+  'categories', //Sera el nombre de la tabla que se apuntara
   {
     name: {
       type: DataTypes.STRING, //Definimos el tipo que sera el campo
