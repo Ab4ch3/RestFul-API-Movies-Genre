@@ -22,7 +22,7 @@ To run this project, you will need to add the following environment variables to
 
 `DB_PORT`: `123`
 
-`DB_NAME`: `mgta1123123one_Test123ing`
+`DB_NAME`: `dbname`
 
 ## Run Locally
 
