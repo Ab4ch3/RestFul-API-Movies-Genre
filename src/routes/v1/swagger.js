@@ -37,11 +37,13 @@ const swaggerOptions = {
   },
 
   apis: [
-    `${path.join(__dirname, './*.js')}`,
-    './src/models/categoriesModel.js',
+    // `${path.join(__dirname, './*.js')}`,// En caso de que tengamos archivos indivuales por cada ruta
+    `${path.join(__dirname, './categoryRoute.js')}`, //ruta
+    './src/models/categoriesModel.js', // Esquema del modelo
   ], // files containing annotations as above
 };
-
+console.log(__dirname);
+console.log(`${path.join(__dirname, '/*.js')}`);
 // Docs en JsonFormat
 const swaggerSpec = swaggerJSDoc(swaggerOptions);
 
