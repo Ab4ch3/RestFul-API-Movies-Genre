@@ -1,11 +1,11 @@
 // import express-router
-import routerx from 'express-promise-router'
+import routerx from 'express-promise-router';
 
 // Import Routes
-import categoryRoute from './categoryRoute.js'
+import categoryRoute from './categoryRoute.js';
 
-const router = routerx()
+const router = routerx();
 
-router.use('/api/v1/categories', categoryRoute)
+router.use('/api/v1/categories', categoryRoute);
 
-export default router
+export default router;

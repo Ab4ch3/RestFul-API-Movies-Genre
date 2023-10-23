@@ -8,7 +8,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "export DEBUG=app:* && nodemon ./src/app.js",
     "start": "export DEBUG=app:* && node ./src/app.js",
-    "lint": "eslint --fix ./*.js"
+    "lint": "eslint ./src",
+    "lint:fix": "eslint ./src --fix"
   },
   "repository": {
     "type": "git",

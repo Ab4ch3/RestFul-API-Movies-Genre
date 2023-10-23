@@ -1,15 +1,15 @@
 // Import Express validador - validationResult
-import { validationResult } from 'express-validator'
+import { validationResult } from 'express-validator';
 // Import handleHttpError
-import handleHttpErros from './handleErrors.js'
+import handleHttpErros from './handleErrors.js';
 
 const validateResults = (req, res, next) => {
-  const result = validationResult(req)
+  const result = validationResult(req);
   if (result.isEmpty()) {
-    return next()
+    return next();
   }
 
-  handleHttpErros(res, result.array(), 403)
-}
+  handleHttpErros(res, result.array(), 403);
+};
 
-export default validateResults
+export default validateResults;

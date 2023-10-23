@@ -1,6 +1,6 @@
 // Importamos el Sequelize , del archivo databases
-import { DataTypes } from 'sequelize'
-import { sequelize } from '../database/index.js'
+import { DataTypes } from 'sequelize';
+import { sequelize } from '../database/index.js';
 
 // import DataTypes
 
@@ -49,6 +49,6 @@ const Category = sequelize.define(
     // Definimos que usaremos createdAt y updatedAt
     timestamps: true
   }
-)
+);
 
-export default Category
+export default Category;
