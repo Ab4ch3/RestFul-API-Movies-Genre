@@ -1,4 +1,4 @@
-import models from '../models/index.js';
+import models from '../models/index.js'
 
 export default {
   /**
@@ -6,8 +6,8 @@ export default {
    * @returns
    */
   getAllCategories: async () => {
-    const result = await models.Category.findAll();
-    return result;
+    const result = await models.Category.findAll()
+    return result
   },
   /**
    * Get Category
@@ -15,13 +15,13 @@ export default {
    * @returns
    */
   getCategory: async (idCategory) => {
-    const result = await models.Category.findByPk(idCategory);
+    const result = await models.Category.findByPk(idCategory)
 
     if (result) {
-      return result.dataValues;
+      return result.dataValues
     }
 
-    return result;
+    return result
   },
   /**
    * Create Category
@@ -29,20 +29,20 @@ export default {
    * @returns
    */
   createCategory: async (Category) => {
-    /* 
+    /*
       Esto verificar si la tabla esta creada y sino esta creada la crea
     */
-    await models.Category.sync();
+    await models.Category.sync()
     const result = await models.Category.create({
       name: Category.name,
-      description: Category.description,
-    });
+      description: Category.description
+    })
 
     if (result) {
-      return result.dataValues;
+      return result.dataValues
     }
 
-    return result;
+    return result
   },
   /**
    * Update Category
@@ -51,24 +51,24 @@ export default {
    * @returns
    */
   updateCategory: async (idCategory, Category) => {
-    const category = await models.Category.findByPk(idCategory);
+    const category = await models.Category.findByPk(idCategory)
 
     if (!category) {
-      return null;
+      return null
     }
 
     const result = await models.Category.update(
       {
         name: Category.name,
-        description: Category.description,
+        description: Category.description
       },
       {
         where: {
-          id: idCategory,
-        },
+          id: idCategory
+        }
       }
-    );
-    return result[0];
+    )
+    return result[0]
   },
   /**
    * delete Category
@@ -76,18 +76,18 @@ export default {
    * @returns
    */
   deleteCategory: async (idCategory) => {
-    const category = await models.Category.findByPk(idCategory);
+    const category = await models.Category.findByPk(idCategory)
 
     if (!category) {
-      return null;
+      return null
     }
 
     const result = await models.Category.destroy({
       where: {
-        id: idCategory,
-      },
-    });
-    console.log(result, 'desde servicio');
-    return result;
-  },
-};
+        id: idCategory
+      }
+    })
+    console.log(result, 'desde servicio')
+    return result
+  }
+}

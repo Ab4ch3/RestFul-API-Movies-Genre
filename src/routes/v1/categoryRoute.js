@@ -1,7 +1,7 @@
 // Import Routerx
-import routerx from 'express-promise-router';
-//import Validator
-import { validatorCreateCategory } from '../../middleware/validators/categoryValidator.js';
+import routerx from 'express-promise-router'
+// import Validator
+import { validatorCreateCategory } from '../../middleware/validators/categoryValidator.js'
 
 // import CategoryController
 import {
@@ -9,10 +9,10 @@ import {
   getCategory,
   createCategory,
   updateCategory,
-  deleteCategory,
-} from '../../controllers/categoryController.js';
+  deleteCategory
+} from '../../controllers/categoryController.js'
 
-const router = routerx();
+const router = routerx()
 /**
  * @swagger
  * tags:
@@ -54,7 +54,7 @@ const router = routerx();
  *                       type: string
  *                       example: "ERROR_GET_CATEGORIES"
  */
-router.get('/', getAllCategories);
+router.get('/', getAllCategories)
 /**
  * @swagger
  * /categories:
@@ -103,7 +103,7 @@ router.get('/', getAllCategories);
  *                       type: string
  *                       example: "ERROR_CREATE_CATEGORY"
  */
-router.post('/', validatorCreateCategory, createCategory);
+router.post('/', validatorCreateCategory, createCategory)
 /**
  * @swagger
  * /categories/{idCategory}:
@@ -166,7 +166,7 @@ router.post('/', validatorCreateCategory, createCategory);
  *                       type: string
  *                       example: "ERROR_GET_CATEGORY"
  */
-router.get('/:idCategory', getCategory);
+router.get('/:idCategory', getCategory)
 /**
  * @swagger
  * /categories/{idCategory}:
@@ -238,7 +238,7 @@ router.get('/:idCategory', getCategory);
  *                       type: string
  *                       example: "ERROR_UPDATED_CATEGORY"
  */
-router.put('/:idCategory', updateCategory);
+router.put('/:idCategory', updateCategory)
 /**
  * @swagger
  * /categories/{idCategory}:
@@ -303,6 +303,6 @@ router.put('/:idCategory', updateCategory);
  *                       type: string
  *                       example: "ERROR_DELETED_CATEGORY"
  */
-router.delete('/:idCategory', deleteCategory);
+router.delete('/:idCategory', deleteCategory)
 
-export default router;
+export default router
