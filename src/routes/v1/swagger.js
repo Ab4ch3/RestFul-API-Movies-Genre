@@ -31,19 +31,17 @@ const swaggerOptions = {
     },
     servers: [
       {
-        url: `${Config.HOST}/api/v1`
+        url: `${Config.HOST}:${Config.PORT}/api/v1`
       }
     ]
   },
-
   apis: [
     // `${path.join(__dirname, './*.js')}`,// En caso de que tengamos archivos indivuales por cada ruta
     `${path.join(__dirname, './categoryRoute.js')}`, // ruta
-    './src/models/categoriesModel.js' // Esquema del modelo
+    './src/models/categoryModel.js' // Esquema del modelo
   ] // files containing annotations as above
 };
-console.log(__dirname);
-console.log(`${path.join(__dirname, '/*.js')}`);
+console.log(swaggerOptions.servers);
 // Docs en JsonFormat
 const swaggerSpec = swaggerJSDoc(swaggerOptions);
 

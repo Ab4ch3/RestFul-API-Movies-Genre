@@ -36,7 +36,7 @@ const router = routerx();
  *                 data:
  *                   type: array
  *                   items:
- *                      $ref: "#/components/schemas/Categories"
+ *                      $ref: "#/components/schemas/Category"
  *       5XX:
  *         description: Some server error
  *         content:
@@ -67,7 +67,7 @@ router.get('/', getAllCategories);
  *       content:
  *         application/json:
  *           schema:
- *             $ref: '#/components/schemas/Categories'
+ *             $ref: '#/components/schemas/Category'
  *     responses:
  *       200:
  *         description: Successful operation.
@@ -85,7 +85,7 @@ router.get('/', getAllCategories);
  *                 data:
  *                   type: array
  *                   items:
- *                      $ref: "#/components/schemas/Categories"
+ *                      $ref: "#/components/schemas/Category"
  *       5XX:
  *         description: Some server error
  *         content:
@@ -132,7 +132,7 @@ router.post('/', validatorCreateCategory, createCategory);
  *                 data:
  *                   type: array
  *                   items:
- *                      $ref: "#/components/schemas/Categories"
+ *                      $ref: "#/components/schemas/Category"
  *       404:
  *         description: The Category was not found
  *         content:
@@ -187,7 +187,7 @@ router.get('/:idCategory', getCategory);
  *       content:
  *         application/json:
  *           schema:
- *             $ref: '#/components/schemas/Categories'
+ *             $ref: '#/components/schemas/Category'
  *     responses:
  *       200:
  *         description: Successful operation.

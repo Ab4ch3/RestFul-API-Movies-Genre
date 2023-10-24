@@ -13,7 +13,7 @@ import { sequelize } from '../database/index.js';
  * @swagger
  * components:
  *   schemas:
- *     Categories:
+ *     Category:
  *       type: object
  *       properties:
  *         name:

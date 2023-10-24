@@ -31,7 +31,12 @@ const app = express();
 app.use(morgan('dev'));
 
 // Cors
-app.use(cors());
+app.use(
+  cors({
+    // origin: ['http://127.0.0.1:5000', 'https://localhost:5000'] En caso de que queramos colocarlo para host especificos
+    origin: ['*']
+  })
+);
 
 // Enable receive json data
 app.use(express.json());
