@@ -41,7 +41,6 @@ const swaggerOptions = {
     './src/models/categoryModel.js' // Esquema del modelo
   ] // files containing annotations as above
 };
-console.log(swaggerOptions.servers);
 // Docs en JsonFormat
 const swaggerSpec = swaggerJSDoc(swaggerOptions);
 
