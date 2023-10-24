@@ -4,9 +4,8 @@ RESTful API about film categories. This project is based on MVC architecture
 
 ## Tech Stack
 
-**Server:** NodeJS, Express, Javascript , MySQL
-
-**Library:** Sequelize ORM, Swagger, Express-router, Express-validator
+NodeJS, Express, Javascript , MySQL
+Sequelize ORM, Swagger, Express-router, Express-validator
 
 ## Environment Variables
 
