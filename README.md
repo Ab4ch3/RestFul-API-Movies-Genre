@@ -1,6 +1,7 @@
 # RESTful API Categories
 
-RESTful API about film categories. This project is based on MVC architecture
+RESTful API about film categories.
+MVC architecture
 
 ## Tech Stack
 
