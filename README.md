@@ -1,6 +1,6 @@
-# RESTful API Categories
+# REST API Categories
 
-RESTful API about film categories.
+REST API about film categories.
 MVC architecture
 
 ## Tech Stack
