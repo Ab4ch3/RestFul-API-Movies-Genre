@@ -1,4 +1,4 @@
-import Category from './categoryModel.js';
+import Category from './category.model.js';
 
 export default {
   Category

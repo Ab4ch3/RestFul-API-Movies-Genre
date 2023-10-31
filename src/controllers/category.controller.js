@@ -5,7 +5,7 @@ import { matchedData } from 'express-validator';
 // Import handleHttpErrors
 import handleHttpErrors from '../helpers/handleErrors.js';
 // Import Services
-import categoryServices from '../services/categoryServices.js';
+import categoryServices from '../services/category.services.js';
 
 const logger = debug('app:module-CategoryController');
 

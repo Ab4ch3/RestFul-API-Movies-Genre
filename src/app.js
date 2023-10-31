@@ -4,9 +4,10 @@ import express from 'express';
 import cors from 'cors';
 // Import morgan
 import morgan from 'morgan';
-// Import config
+// Import Path
 import path, { dirname } from 'path';
 import { fileURLToPath } from 'url';
+// Import config
 import Config from './config/index.js';
 // Import conexion database
 import { ConnectMysql } from './database/index.js';
@@ -15,12 +16,11 @@ import v1Router from './routes/v1/index.js';
 // Import Debug
 import debug from 'debug';
 // Import Swagger
-import swaggerDocs from './routes/v1/swagger.js';
-// Import Path
-// we can use dirname and filename
+import swaggerDocs from './routes/v1/swagger.js'; // v1
 
 const logger = debug('app:module-app');
 
+// we can use dirname and filename
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 

@@ -1,7 +1,7 @@
 // Import Routerx
 import routerx from 'express-promise-router';
 // import Validator
-import { validatorCreateCategory } from '../../middleware/validators/categoryValidator.js';
+import { validatorCreateCategory } from '../../middleware/validators/category.validator.js';
 
 // import CategoryController
 import {
@@ -10,10 +10,10 @@ import {
   createCategory,
   updateCategory,
   deleteCategory
-} from '../../controllers/categoryController.js';
+} from '../../controllers/category.controller.js';
 
 const router = routerx();
-/**
+/** GET CATRE
  * @swagger
  * tags:
  *   name: Categories
@@ -36,7 +36,7 @@ const router = routerx();
  *                 data:
  *                   type: array
  *                   items:
- *                      $ref: "#/components/schemas/Category"
+ *                      $ref: "#/components/schemas/category"
  *       5XX:
  *         description: Some server error
  *         content:
@@ -67,7 +67,7 @@ router.get('/', getAllCategories);
  *       content:
  *         application/json:
  *           schema:
- *             $ref: '#/components/schemas/Category'
+ *             $ref: '#/components/schemas/category'
  *     responses:
  *       200:
  *         description: Successful operation.
@@ -85,7 +85,7 @@ router.get('/', getAllCategories);
  *                 data:
  *                   type: array
  *                   items:
- *                      $ref: "#/components/schemas/Category"
+ *                      $ref: "#/components/schemas/category"
  *       5XX:
  *         description: Some server error
  *         content:
@@ -132,7 +132,7 @@ router.post('/', validatorCreateCategory, createCategory);
  *                 data:
  *                   type: array
  *                   items:
- *                      $ref: "#/components/schemas/Category"
+ *                      $ref: "#/components/schemas/category"
  *       404:
  *         description: The Category was not found
  *         content:
@@ -187,7 +187,7 @@ router.get('/:idCategory', getCategory);
  *       content:
  *         application/json:
  *           schema:
- *             $ref: '#/components/schemas/Category'
+ *             $ref: '#/components/schemas/category'
  *     responses:
  *       200:
  *         description: Successful operation.
