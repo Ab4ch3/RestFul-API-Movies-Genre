@@ -30,6 +30,7 @@
     "nodemon": "^3.0.1"
   },
   "dependencies": {
+    "@slack/webhook": "^7.0.1",
     "cors": "^2.8.5",
     "debug": "^4.3.4",
     "dotenv": "^16.3.1",
@@ -37,6 +38,7 @@
     "express-promise-router": "^4.1.1",
     "express-validator": "^7.0.1",
     "morgan": "^1.10.0",
+    "morgan-body": "^2.6.9",
     "mysql2": "^3.6.0",
     "sequelize": "^6.32.1",
     "swagger-jsdoc": "^6.2.8",

@@ -3,7 +3,7 @@ import express from 'express';
 // Import Cors
 import cors from 'cors';
 // Import morgan
-import morgan from 'morgan';
+import morganbody from 'morgan-body';
 // Import Path
 import path, { dirname } from 'path';
 import { fileURLToPath } from 'url';
@@ -17,18 +17,16 @@ import v1Router from './routes/v1/index.js';
 import debug from 'debug';
 // Import Swagger
 import swaggerDocs from './routes/v1/swagger.js'; // v1
+// Import LooggerStream
+import loggerStream from './helpers/handleLogger.js';
 
 const logger = debug('app:module-app');
-
 // we can use dirname and filename
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 // Start Express
 const app = express();
-
-// Morgan
-app.use(morgan('dev'));
 
 // Cors
 app.use(
@@ -44,6 +42,18 @@ app.use(express.urlencoded({ extended: true }));
 
 // we indicate to express which is the path to public files
 app.use(express.static(path.join(__dirname, 'public')));
+
+/**
+ *  MORGAN BODY
+ *
+ */
+morganbody(app, {
+  noColors: true,
+  stream: loggerStream,
+  skip: function (req, res) {
+    return res.statusCode < 400; // retorna false
+  }
+});
 
 /**
  * Invoke Routes
