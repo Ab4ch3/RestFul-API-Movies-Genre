@@ -21,7 +21,7 @@ const swaggerOptions = {
     info: {
       title: 'Categories API-REST',
       description:
-        'This is an example of a Category API-REST Server based on the OpenAPI 3.0 specification.</br> </br> Some useful links: </br> - [Category Films repository](https://github.com/Ab4ch3/API-Categories.git) ',
+        'Category API-REST Server based on the OpenAPI 3.0 specification.</br> </br> Some useful links: </br> - [Category Films repository](https://github.com/Ab4ch3/API-Categories.git) ',
       termsOfService: ' http://swagger.io/terms/',
       contact: {
         name: 'Miguel Abache',
