@@ -1,6 +1,6 @@
 # REST API Categories
 
-REST API about film categories.
+REST API about film categories.</br>
 MVC architecture
 
 ## Tech Stack
@@ -13,6 +13,7 @@ MVC architecture
 - MySQL
 - Sequelize ORM,
 - Swagger,
+- Webhook Slack,
 
 ## Environment Variables
 
@@ -29,6 +30,8 @@ To run this project, you will need to add the following environment variables to
 `DB_PORT`: `123`
 
 `DB_NAME`: `dbname`
+
+`SLACK_WEBHOOK`: `Webhook Slack`
 
 ## Run Locally
 
