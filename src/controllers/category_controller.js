@@ -3,7 +3,7 @@ import debug from 'debug';
 // Import Validator
 import { matchedData } from 'express-validator';
 // Import handleHttpErrors
-import handleHttpErrors from '../helpers/handleErrors.js';
+import handleHttpErrors from '../helpers/handle_errors.js';
 // Import Services
 import categoryServices from '../services/category_services.js';
 

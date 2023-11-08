@@ -2,7 +2,7 @@
 import { check } from 'express-validator';
 
 // Import response validateResults
-import validateResults from '../../helpers/handleValidator.js';
+import validateResults from '../../helpers/handle_validator.js';
 
 /**
  * define validate based on models

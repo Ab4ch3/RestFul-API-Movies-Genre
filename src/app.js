@@ -18,7 +18,7 @@ import debug from 'debug';
 // Import Swagger
 import swaggerDocs from './routes/v1/swagger.js'; // v1
 // Import LooggerStream
-import loggerStream from './helpers/handleLogger.js';
+import loggerStream from './helpers/handle_logger.js';
 
 const logger = debug('app:module-app');
 // we can use dirname and filename
