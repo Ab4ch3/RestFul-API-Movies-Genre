@@ -29,8 +29,8 @@ const swaggerOptions = {
         email: 'miiguel.abache@gmail.com'
       },
       license: {
-        name: 'Apache 2.0',
-        url: 'http://www.apache.org/licenses/LICENSE-2.0.html'
+        name: 'MIT',
+        url: 'https://choosealicense.com/licenses/mit/'
       },
       version: '1.1.0'
     },
