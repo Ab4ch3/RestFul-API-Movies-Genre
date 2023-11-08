@@ -2,7 +2,7 @@
 import routerx from 'express-promise-router';
 
 // Import Routes
-import categoryRoute from './category.route.js';
+import categoryRoute from './category_route.js';
 
 const router = routerx();
 

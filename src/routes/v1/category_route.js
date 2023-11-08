@@ -1,7 +1,7 @@
 // Import Routerx
 import routerx from 'express-promise-router';
 // import Validator
-import { validatorCreateCategory } from '../../middleware/validators/category.validator.js';
+import { validatorCreateCategory } from '../../middleware/validators/category_validator.js';
 
 // import CategoryController
 import {
@@ -10,7 +10,7 @@ import {
   createCategory,
   updateCategory,
   deleteCategory
-} from '../../controllers/category.controller.js';
+} from '../../controllers/category_controller.js';
 
 const router = routerx();
 /** GET CATRE
