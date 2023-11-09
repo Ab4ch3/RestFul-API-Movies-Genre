@@ -13,53 +13,12 @@ import {
 } from '../../controllers/category_controller.js';
 
 const router = routerx();
-/** GET CATRE
- * @swagger
- * tags:
- *   name: Categories
- *   description: Everything about Categories
- * /categories:
- *   get:
- *     summary: Lists all Categories
- *     tags: [Categories]
- *     responses:
- *       200:
- *         description: Lists all Categories
- *         content:
- *           application/json:
- *             schema:
- *               type: object
- *               properties:
- *                 status:
- *                   type: string
- *                   example: OK
- *                 data:
- *                   type: array
- *                   items:
- *                      $ref: "#/components/schemas/category"
- *       5XX:
- *         description: Some server error
- *         content:
- *           application/json:
- *             schema:
- *               type: object
- *               properties:
- *                 status:
- *                   type: string
- *                   example: ERROR
- *                 data:
- *                   type: object
- *                   properties:
- *                     message:
- *                       type: string
- *                       example: "ERROR_GET_CATEGORIES"
- */
-router.get('/', getAllCategories);
+
 /**
  * @swagger
  * /categories:
  *   post:
- *     summary: Create a new Category
+ *     summary: Add a new Category
  *     tags: [Categories]
  *     requestBody:
  *       description : Create a new Category
@@ -104,6 +63,50 @@ router.get('/', getAllCategories);
  *                       example: "ERROR_CREATE_CATEGORY"
  */
 router.post('/', validatorCreateCategory, createCategory);
+
+/** GET CATEGORY
+ * @swagger
+ * tags:
+ *   name: Categories
+ *   description: Everything about Categories
+ * /categories:
+ *   get:
+ *     summary: Lists all Categories
+ *     tags: [Categories]
+ *     responses:
+ *       200:
+ *         description: Lists all Categories
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 status:
+ *                   type: string
+ *                   example: OK
+ *                 data:
+ *                   type: array
+ *                   items:
+ *                      $ref: "#/components/schemas/category"
+ *       5XX:
+ *         description: Some server error
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 status:
+ *                   type: string
+ *                   example: ERROR
+ *                 data:
+ *                   type: object
+ *                   properties:
+ *                     message:
+ *                       type: string
+ *                       example: "ERROR_GET_CATEGORIES"
+ */
+router.get('/', getAllCategories);
+
 /**
  * @swagger
  * /categories/{idCategory}:

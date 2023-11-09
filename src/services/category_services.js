@@ -68,6 +68,7 @@ export default {
         }
       }
     );
+
     return result[0];
   },
   /**
@@ -87,7 +88,6 @@ export default {
         id: idCategory
       }
     });
-    console.log(result, 'desde servicio');
     return result;
   }
 };
