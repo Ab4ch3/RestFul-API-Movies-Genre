@@ -2,12 +2,12 @@
   "name": "api-categories",
   "version": "1.0.0",
   "description": "API Categories , with mysql remote",
-  "main": "app.js",
+  "main": "index.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "export DEBUG=app:* && nodemon ./src/app.js",
-    "start": "export DEBUG=app:* && node ./src/app.js",
+    "dev": "export DEBUG=app:* && nodemon ./src/index.js",
+    "start": "node ./src/index.js",
     "lint": "eslint ./src",
     "lint:fix": "eslint ./src --fix"
   },
