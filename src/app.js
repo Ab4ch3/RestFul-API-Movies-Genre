@@ -5,8 +5,8 @@ import cors from 'cors';
 // Import morgan
 import morganbody from 'morgan-body';
 // Import Path
-// import path, { dirname } from 'path';
-// import { fileURLToPath } from 'url';
+import path, { dirname } from 'path';
+import { fileURLToPath } from 'url';
 // Import config
 import Config from './config/index.js';
 // Import conexion database
@@ -22,8 +22,8 @@ import loggerStream from './helpers/handle_logger.js';
 
 const logger = debug('app:module-app');
 // we can use dirname and filename
-// const __filename = fileURLToPath(import.meta.url);
-// const __dirname = dirname(__filename);
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 // Start Express
 const app = express();
@@ -41,7 +41,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // we indicate to express which is the path to public files
-// app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 /**
  *  MORGAN BODY
