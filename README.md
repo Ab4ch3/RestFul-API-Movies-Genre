@@ -38,13 +38,13 @@ To run this project, you will need to add the following environment variables to
 Clone the project
 
 ```bash
-  git clone https://github.com/Ab4ch3/API-Categories.git
+  git clone https://github.com/Ab4ch3/RestFull-API-Movies-Genre.git
 ```
 
 Go to the project directory
 
 ```sh
-  cd API-Categories
+  cd RestFull-API-Movies-Genre
 ```
 
 Install dependencies
