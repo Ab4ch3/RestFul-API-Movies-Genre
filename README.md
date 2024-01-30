@@ -1,6 +1,6 @@
-# REST API Categories
+# RESTFULL API Movies-Genre
 
-REST API about film categories.</br>
+REST API about Movies Genre.</br>
 MVC architecture
 
 ## Tech Stack
