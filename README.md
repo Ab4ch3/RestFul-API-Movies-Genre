@@ -1,4 +1,4 @@
-# RESTFULL API Movies-Genre
+# RESTFUL API Movies-Genre
 
 REST API about Movies Genre.</br>
 MVC architecture
